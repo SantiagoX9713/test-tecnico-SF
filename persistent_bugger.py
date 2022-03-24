@@ -9,7 +9,6 @@ def persistence(n):
             for i in s:
                 temp *= int(i)
             s = str(temp)
-            print(temp)
             steps += 1 
             temp = 1
         return steps
