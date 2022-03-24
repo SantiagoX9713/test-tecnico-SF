@@ -1,8 +1,12 @@
+from curses.ascii import islower, isupper
+
 def find_missing_letter(letters):
     missing_letter = ''
     s = len(letters) - 1
     for i in range(0,s):
-        if (ord(letters[i+1]) - ord(letters[i]) > 1):
+        if (ord(letters[i+1]) - ord(letters[i]) > 3):
+            raise ValueError("Please don't conbine lower and uppercase ")
+        elif (ord(letters[i+1]) - ord(letters[i]) > 1):
             missing_letter = chr(ord(letters[i]) + 1)
     return missing_letter
 
